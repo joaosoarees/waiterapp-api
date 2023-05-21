@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    container_name: waiterapp_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: waiterapp
+      MONGO_INITDB_ROOT_PASSWORD: waiterapp
+    volumes:
+      - ./mongo/data:/data/db
+      - ./mongo/backup:/backup
+    ports:
+      - 27017:27017
+    networks:
+      - waiter-app
+
+networks:
+  waiter-app:
+    driver: bridge
