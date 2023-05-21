@@ -8,6 +8,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: waiterapp
       MONGO_INITDB_ROOT_PASSWORD: waiterapp
+      MONGO_INITDB_DATABASE: waiterapp
     volumes:
       - ./mongo/data:/data/db
       - ./mongo/backup:/backup
