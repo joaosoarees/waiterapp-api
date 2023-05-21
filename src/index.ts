@@ -1,5 +1,3 @@
-let texto: string;
+const teste = 123;
 
-texto = `123`
-
-console.log(texto)
+console.log(teste);
